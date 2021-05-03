@@ -185,6 +185,8 @@ func (r *OrderHandler) Update(c *gin.Context) {
 		return
 	}
 
+	data.OrderItem = items
+
 	c.JSON(http.StatusOK, gin.H{
 		"message": http.StatusText(http.StatusOK),
 		"data":    data,
